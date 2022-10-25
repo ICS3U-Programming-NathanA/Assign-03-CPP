@@ -7,8 +7,8 @@
 
 #include <iostream>
 
-// declare userNumAsInt as a integer
-int userNumAsInt, playAgainNum, countryInt;
+// declare userAgeInt as a integer
+int userAgeInt, playAgainNum, countryInt;
 
 int main() {
     // declare the constants for MIN_AGE
@@ -24,9 +24,9 @@ int main() {
     const int CANADA = 1;
     const int AUSTRIA = 2;
     const int BAHRAIN = 3;
-    // declare userNumString, playAgainString,
+    // declare userAgeString, playAgainString,
     // and countryString as a string,
-    std::string userNumString;
+    std::string userAgeString;
     std::string playAgainString;
     std::string countryString;
 
@@ -34,12 +34,12 @@ int main() {
     std::cout << "Enter 1 for Canada, 2 for Austria or 3 for Bahrain: ";
     std::cin >> countryString;
     std::cout << "Enter your age: ";
-    std::cin >> userNumString;
+    std::cin >> userAgeString;
 
     // 2 Try catches to catch if they wrote anything
     // other than a integer
     try {
-        userNumAsInt = std::stoi(userNumString);
+        userAgeInt = std::stoi(userAgeString);
         try {
             countryInt = std::stoi(countryString);
             if (countryInt < NEGATIVE) {
@@ -51,13 +51,13 @@ int main() {
             } else if (countryInt == CANADA) {
                 // If statement to see if the number
                 // they entered is a negative
-                if (userNumAsInt < NEGATIVE) {
+                if (userAgeInt < NEGATIVE) {
                     std::cout << "Please enter a positive number\n";
                     std::cout <<
                     "To play again type 1 otherwise type any other number: ";
                     std::cin >> playAgainString;
-                } else if (userNumAsInt >= MIN_AGE_CANADA
-                && userNumAsInt <= MAX_AGE) {
+                } else if (userAgeInt >= MIN_AGE_CANADA
+                && userAgeInt <= MAX_AGE) {
                     // else if statement to see if their the users
                     // age is greater than or
                     // equal to 18 and is less
@@ -84,13 +84,13 @@ int main() {
                     std::cout <<
                     "To play again type 1 otherwise type any other number: ";
                     std::cin >> playAgainString;
-                } else if (userNumAsInt < NEGATIVE) {
+                } else if (userAgeInt < NEGATIVE) {
                     std::cout << "Please enter a positive number\n";
                     std::cout <<
                     "To play again type 1 otherwise type any other number: ";
                     std::cin >> playAgainString;
-                } else if (userNumAsInt >= MIN_AGE_AUSTRIA
-                && userNumAsInt <= MAX_AGE) {
+                } else if (userAgeInt >= MIN_AGE_AUSTRIA
+                && userAgeInt <= MAX_AGE) {
                     // else if statement to see if their the users
                     // age is greater than or
                     // equal to 16 and is less than or equal to 122
@@ -116,13 +116,13 @@ int main() {
                     std::cout <<
                     "To play again type 1 otherwise type any other number: ";
                     std::cin >> playAgainString;
-                } else if (userNumAsInt < NEGATIVE) {
+                } else if (userAgeInt < NEGATIVE) {
                     std::cout << "Please enter a positive number\n";
                     std::cout <<
                     "To play again type 1 otherwise type any other number: ";
                     std::cin >> playAgainString;
-                } else if (userNumAsInt >= MIN_AGE_BAHRAIN
-                && userNumAsInt <= MAX_AGE) {
+                } else if (userAgeInt >= MIN_AGE_BAHRAIN
+                && userAgeInt <= MAX_AGE) {
                     // else if statement to see if their the users
                     // age is greater than or
                     // equal to 20 and is less than or equal to 122
